@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Data_Structures_practice
+namespace Data_Structures_practice  //https://www.java67.com/2014/07/quicksort-algorithm-in-java-in-place-example.html
 {
     class BinarySearch
     {
