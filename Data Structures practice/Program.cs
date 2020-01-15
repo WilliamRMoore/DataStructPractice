@@ -28,7 +28,8 @@ namespace Data_Structures_practice
                 string UserInput;
                 Console.WriteLine("What program would you like to run?");
                 Console.WriteLine("1: Linked List demo" + 
-                    "\n 2: Binary Search");
+                    "\n2: Binary Search" +
+                    "\n3: Palindrome Check");
                 UserInput = Console.ReadLine();
                 if(UserInput == "1")
                 {
@@ -38,12 +39,30 @@ namespace Data_Structures_practice
                 {
                     BinarySeach(RandNumArr);
                 }
+                if(UserInput == "3")
+                {
+                    PalindromeDemo();
+                }
             }
 
             void BinarySeach(int[] arr)
             {
                 Console.WriteLine("What Number would you like to search for?");
                 int SearchNum = Convert.ToInt32(Console.ReadLine());
+            }
+
+            void PalindromeDemo()
+            {
+                Console.WriteLine("Please Input a string to check.");
+                string input = Console.ReadLine().ToLower();
+                Palindrome palindrome = new Palindrome();
+                bool check = palindrome.checkPalindrome(input);
+                Console.WriteLine("Checking the complex way.");
+                Console.WriteLine($"Is string \"{input}\" a Palindrome? : {check}");
+                Console.WriteLine("Checking the lazy way");
+                bool lazyCheck = palindrome.LazyPalindromeCheck(input);
+                Console.WriteLine($"Is string \"{input}\" a Palindrome? : {lazyCheck}");
+                
             }
 
              void ListProg()
